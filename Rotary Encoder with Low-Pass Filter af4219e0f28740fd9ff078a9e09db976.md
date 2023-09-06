@@ -40,36 +40,4 @@ ISR_EncoderB()
 - Adjusts the encoder position based on the determined direction of rotation.
 ```
 
-```c
-//code snippet
-void setup() {
-  pinMode(encoderPinA, INPUT_PULLUP);
-  pinMode(encoderPinB, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(encoderPinA), ISR_EncoderA, CHANGE);
-  attachInterrupt(digitalPinToInterrupt(encoderPinB), ISR_EncoderB, CHANGE);
-  Serial.begin(9600);
-}
 
-void loop() {
-  filteredPosition += alpha * (encoderPosition - filteredPosition);
-  Serial.print("Encoder position: ");
-  Serial.println(filteredPosition);
-  delay(10);
-}
-
-void ISR_EncoderA() {
-  if (digitalRead(encoderPinA) == digitalRead(encoderPinB)) {
-    encoderPosition++;
-  } else {
-    encoderPosition--;
-  }
-}
-
-void ISR_EncoderB() {
-  if (digitalRead(encoderPinB) != digitalRead(encoderPinA)) {
-    encoderPosition++;
-  } else {
-    encoderPosition--;
-  } 
-}
-```
