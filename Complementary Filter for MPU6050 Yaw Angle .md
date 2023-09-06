@@ -102,7 +102,7 @@ depending on the sensor datasheet?
 
 Ans: A low-pass filter can be used to filter out noise from the sensor, allows low-frequency signals to pass through and cuts off high-frequency signals.
 
-cutoff frequency = bandwidth / 10=260/10=26HZ
+cutoff frequency = bandwidth / 10=256/10=25HZ
 
 # Resources
 
