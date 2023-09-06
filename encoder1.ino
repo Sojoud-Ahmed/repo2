@@ -34,5 +34,5 @@ void ISR_EncoderB() {
     encoderPosition++;
   } else {
     encoderPosition--;
-  }
+  } 
 }
