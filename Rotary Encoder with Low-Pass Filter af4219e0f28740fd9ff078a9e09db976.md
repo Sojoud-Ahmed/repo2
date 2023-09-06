@@ -12,8 +12,9 @@ This code represents  implementation for interfacing with a rotary encoder and f
 
 - Connect the VCC and GND pins of the Encoder sensor to the respective 5V and GND pins on the Arduino board.
 - Connect the channel A/B pin of the Encoder sensor to the interrupt  pins(2,3) on the Arduino board.
+- 
 
-![kkk.PNG](Rotary%20Encoder%20with%20Low-Pass%20Filter%20af4219e0f28740fd9ff078a9e09db976/kkk.png)
+![encoder.PNG](Rotary%20Encoder%20with%20Low-Pass%20Filter%20af4219e0f28740fd9ff078a9e09db976/encoder.png)
 
 ## Software
 
