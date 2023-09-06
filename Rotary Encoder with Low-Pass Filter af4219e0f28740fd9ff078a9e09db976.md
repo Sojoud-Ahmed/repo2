@@ -38,6 +38,5 @@ ISR_EncoderB()
 - Interrupt service routine (ISR) when encoder pin B changes state.
 - Determines the direction of rotation based on the current states of encoder pins A and B.
 - Adjusts the encoder position based on the determined direction of rotation.
-```
 
 
