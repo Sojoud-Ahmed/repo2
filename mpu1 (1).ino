@@ -20,9 +20,9 @@ const float alpha = 0.97; // Complementary filter coefficient
 const float gyro_scale_factor = 131; // Gyroscope scale factor in LSB/deg/s
 
 void setup() {
-  Serial.begin(9600); 
+
+  Serial.begin(9600); // Initializes the serial communication at a baud rate of 9600.
   Wire.begin(); 
-  // Wake up the MPU6050 sensor and set clock source to Gyro Z
   Wire.beginTransmission(MPU_ADDR); 
   Wire.write(PWR_MGMT_1); 
   Wire.write(0); 
@@ -32,7 +32,6 @@ void setup() {
   Wire.write(GYRO_CONFIG);
   Wire.write(0x00);
   Wire.endTransmission();
-
   // Configure MPU6050 accelerometer range to +/- 2g
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(ACCEL_CONFIG);
@@ -42,31 +41,29 @@ void setup() {
 
 void loop() {
   float accel_x, accel_y, accel_z, gyro_z;
-  
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(ACCEL_X_H);
   Wire.endTransmission();
   Wire.requestFrom(MPU_ADDR, 6);
+ //Converts the raw sensor data to physical  values.
   accel_x = (Wire.read() << 8 | Wire.read())/ 16384.0; // Convert to g's
   accel_y = (Wire.read() << 8 | Wire.read())/ 16384.0;
   accel_z =(Wire.read() << 8 | Wire.read()) / 16384.0;
-
-
   Wire.beginTransmission(MPU_ADDR);
   Wire.write(GYRO_Z_H);
   Wire.endTransmission();
   Wire.requestFrom(MPU_ADDR,2);
   gyro_z =  (Wire.read() << 8 | Wire.read())/ gyro_scale_factor; // Convert to deg/s
-  
-  // Calculate yaw angle using gyro data
+  // Calculates the yaw angle using both gyroscope and accelerometer data.
+  //1. Calculate yaw angle using gyro data
   gyro_yaw_angle += gyro_z * 0.01; // Sampling time is 10 ms
   
-  // Calculate yaw angle using accelerometer data
+  // 2.Calculate yaw angle using accelerometer data
   accel_yaw_angle = atan2(-accel_x, accel_y) * 180.0 / PI; // Convert to degrees
   
   // Combine gyro and accelerometer data using complementary filter
   yaw_angle = alpha * gyro_yaw_angle + (1.0 - alpha) * accel_yaw_angle;
-  
+  //Prints the calculated yaw angle to the serial monitor.
   Serial.print("Yaw angle: ");
   Serial.print(yaw_angle);
   Serial.println("`\n");
