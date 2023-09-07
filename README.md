@@ -3,11 +3,10 @@
 
 
    1.main(1).c:
-*Description:print the name,Draw it with astreics.
+ *Description:print the name,Draw it with   astreics.
    2.main(4).c:
-*Description:count down,delay between numbers.
-   3.main(2).c:
-*Description:Add,View,remove Tasks(data),Mark tasks,show if tasks complete or not
+  *Description:count down,delay between       numbers.
+   3.main(2).c: *Description:Add,View,removeTasks(data),Mark tasks,show if tasks complete or not
   ,and show data in table format.
    4.main(3).c:
 *Description:calculate the better measurement of of the missile projectile by Averaging methods.
@@ -56,13 +55,13 @@ this model on the give dataset.
    Calculate the Yaw angle which angle 
 along the z-axis without using a libraries.
 And document it in #complementary filter.md.
-# encoder1:
-*Using rotary Encoder and get the 
+  # encoder1:
+     *Using rotary Encoder and get the 
 number of counts from the train of 
 impulse from A, and B signals.
 And document it in #rotary encoder.md.
 # file1:
-* Article About Path Planning Using Latex.
+   * Article About Path Planning Using Latex.
 # Untitled16:
   *Apply Low Pass Filter and calculate  coefficients in 2  signals and plot signals before and after filter.
 
