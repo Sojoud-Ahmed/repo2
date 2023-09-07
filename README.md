@@ -26,11 +26,11 @@ motor using transistors.
 
 # TASK3:
    
-   # i2c_communication_protoco1,2:
+   #i2c_communication_protoco1,2:
 *Write 2 Arduino codes, one that interface with two push buttons,
 and the other one communicates with the first one by receiving
 data about buttons state, using I2C communication protocol.
-   # cookie_bot321:
+   #cookie_bot321:
 *the cookie bot has four ultrasnoic that
 measure the distance each up to 8m positioned as
 shown. Specifically, positioned at (0°, 90°, 180°, 270°) from
@@ -40,10 +40,10 @@ that champer.
 # TASK4:
 
 
-   # task411:
+   #task411:
 *Implement a Python program that simulates this air battlefield
 using OOP Methods.
-   # task42:
+   #task42:
 *Create Linear Regression Model, and train
 this model on the give dataset.
 
@@ -56,8 +56,7 @@ this model on the give dataset.
 along the z-axis without using a libraries.
 And document it in #complementary filter.md.
   # encoder1:
-     *Using rotary Encoder and get the 
-number of counts from the train of 
+   *Using rotary Encoder and get the number of counts from the train of 
 impulse from A, and B signals.
 And document it in #rotary encoder.md.
 # file1:
