@@ -52,7 +52,14 @@ this model on the give dataset.
 *describe my first Linux experience in different Linux commands and tools.
 #task6:
   # mpu1
-  Using sensor mpu6050 
+  *Using sensor mpu6050 
    Calculate the Yaw angle which angle 
 along the z-axis without using a libraries.
-And document it in comp
+And document it in #complementary filter.md.
+#encoder1:
+*Using rotary Encoder and get the 
+number of counts from the train of 
+impulse from A, and B signals.
+And document it in #
+
+
