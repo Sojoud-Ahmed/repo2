@@ -50,3 +50,9 @@ this model on the give dataset.
 
 #Markdown:
 *describe my first Linux experience in different Linux commands and tools.
+#task6:
+  # mpu1
+  Using sensor mpu6050 
+   Calculate the Yaw angle which angle 
+along the z-axis without using a libraries.
+And document it in comp
