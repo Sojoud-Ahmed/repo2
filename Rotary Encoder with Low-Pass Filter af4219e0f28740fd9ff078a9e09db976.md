@@ -1,6 +1,6 @@
-# Rotary Encoder with Low-Pass Filter
+# Rotary Encoder 
 
-This code represents  implementation for interfacing with a rotary encoder and filtering the position readings using a low-pass filter.
+This code represents  implementation for interfacing with a rotary encoder to print encoder position .
 
 ## Hardware Components
 
