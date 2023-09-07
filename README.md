@@ -51,7 +51,7 @@ this model on the give dataset.
 #Markdown:
 *describe my first Linux experience in different Linux commands and tools.
 #task6:
-  # mpu1
+  # mpu1:
   *Using sensor mpu6050 
    Calculate the Yaw angle which angle 
 along the z-axis without using a libraries.
@@ -60,6 +60,9 @@ And document it in #complementary filter.md.
 *Using rotary Encoder and get the 
 number of counts from the train of 
 impulse from A, and B signals.
-And document it in #
-
+And document it in #rotary encoder.md.
+#file1:
+  *Article About Path Planning Using Latex.
+#Untitled16:
+  *Apply Low Pass Filter and calculate  coefficients in 2  signals and plot signals before and after filter.
 
