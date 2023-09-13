@@ -68,7 +68,7 @@ void loop() {
   Serial.print(yaw_angle);
   Serial.println("`\n");
 
-  delay(100); // Wait for next sampling interval
+  delay(10); 
 }
 /*
 #include <Wire.h>
@@ -117,12 +117,12 @@ void loop() {
   double gyro_Z =( Wire.read() << 8 | Wire.read())/GYRO_LSB_250DPS; 
 
   
-  double accel_x_g =( Wire.read() << 8 | Wire.read())/ ACCEL_LSB_2G;
-  double accel_y_g =( Wire.read() << 8 | Wire.read())/ ACCEL_LSB_2G;
-  double accel_Z_g = ( Wire.read() << 8 | Wire.read())/ ACCEL_LSB_2G;
+  double accel_x =( Wire.read() << 8 | Wire.read())/ ACCEL_LSB_2G;
+  double accel_y=( Wire.read() << 8 | Wire.read())/ ACCEL_LSB_2G;
+  double accel_Z= ( Wire.read() << 8 | Wire.read())/ ACCEL_LSB_2G;
 
   // Calculate yaw angle using accelerometer data
-  double accel_yaw = atan2(-accel_x_g, accel_y_g) * 180.0 / PI; // Convert to degrees
+  double accel_yaw = atan2(-accel_x, accel_y) * 180.0 / PI; // Convert to degrees
 
 
   // Update yaw estimate using the complementary filter
