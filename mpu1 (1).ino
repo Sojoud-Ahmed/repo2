@@ -12,12 +12,12 @@
 #define ACCEL_Z_L 0x40
 #define PWR_MGMT_1 0x6B
 #define ACCEL_LSB_2G 16384.0 // MPU6050 accelerometer sensitivity at +/- 2g
+#define GYRO_LSB_250DPS 131.0// Gyroscope scale factor in LSB/deg/s
 float yaw_angle = 0.0;
 float gyro_yaw_angle = 0.0;
 float accel_yaw_angle = 0.0;
 
 const float alpha = 0.97; // Complementary filter coefficient
-const float gyro_scale_factor = 131; // Gyroscope scale factor in LSB/deg/s
 
 void setup() {
 
@@ -53,7 +53,7 @@ void loop() {
   Wire.write(GYRO_Z_H);
   Wire.endTransmission();
   Wire.requestFrom(MPU_ADDR,2);
-  gyro_z =  (Wire.read() << 8 | Wire.read())/ gyro_scale_factor; // Convert to deg/s
+  gyro_z =  (Wire.read() << 8 | Wire.read())/GYRO_LSB_250DPS; // Convert to deg/s
   // Calculates the yaw angle using both gyroscope and accelerometer data.
   //1. Calculate yaw angle using gyro data
   gyro_yaw_angle += gyro_z * 0.01; // Sampling time is 10 ms
